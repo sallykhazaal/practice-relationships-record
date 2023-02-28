@@ -30,7 +30,7 @@ def test_record_get_artist():
     """
     alanis = Artist('Alanis Morrisette')
     record = Record('jagged little pill', alanis, 1995)
-    assert record.get_artist == alanis
+    assert record.get_artist() == alanis
 
 def test_record_get_year():
     """
