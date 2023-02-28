@@ -72,10 +72,11 @@ def test_record_has_song():
     alanis = Artist('Alanis Morrisette')
     record = Record('jagged little pill', alanis, 1995)
     s1 = Song('You Oughta Know', 120, 'rock')
+    s1cpy = Song('You Oughta Know', 120, 'rock')
     s2 = Song('Hand in My Pocket', 115, 'rock')
     record.songs = [s1, s2]
     assert record.has_song(s1) == True
-    assert record.has_song(Song('Complicated')) == False
+    assert record.has_song(Song('Complicated', 100, 'whatever')) == False
 
 def test_record_get_longest_song():
     """
